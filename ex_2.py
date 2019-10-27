@@ -1,13 +1,13 @@
-#!/usr / bin / env python3
-из librip.gens импорт gen_random
-из librip.итераторы импортируют Unique
+#!/usr/bin/env python3
+from librip.gens import gen_random
+from librip.iterators import Unique
 
 data1 = [1, 1, 1, 1, 1, 2, 2, 2, 2, 2]
-data2 = gen_random( 1, 10, 50)
-data3 = ['abC', 'aBc', ' ABC ']
+data2 = gen_random(1, 10, 50)
+data3 = ['abC', 'aBc', 'ABC']
 
-для элемента в Unique (data1):
-    печать (item)
+for item in Unique(data1):
+    print(item)
 
-печать (список (уникальный (дата2)))
-печать (список (уникальный (data3)))
+print(list(Unique(data2)))
+print(list(Unique(data3)))
