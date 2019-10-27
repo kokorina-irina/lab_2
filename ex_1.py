@@ -1,13 +1,13 @@
-#!/usr / bin / env python3
-из librip.поле импорта gens, gen_random
+#!/usr/bin/env python3
+from librip.gens import field, gen_random
 
-товары = [
- {'title': 'Ковер', 'price': 2000, 'color': 'green'},
- {'title': 'Диван для отдыха', 'price': 5300, 'color': 'black'},
- {'title': 'Стелаж', ' Price ': 7000, 'color': 'white'},
- {'title': 'Вешалка для одежды', 'price': 800, 'color': 'white'}
+goods = [
+    {'title': 'Ковер', 'price': 2000, 'color': 'green'},
+    {'title': 'Диван для отдыха', 'price': 5300, 'color': 'black'},
+    {'title': 'Стелаж', 'price': 7000, 'color': 'white'},
+    {'title': 'Вешалка для одежды', 'price': 800, 'color': 'white'}
 ]
 
-print (list (gen_random( 1, 11, 20)))
-печать (список (поле (товаров, 'название')))
-печать (список (поле (товаров, 'Название', ' Цена ')))
+print(list(gen_random(1, 11, 20)))
+print(list(field(goods, 'title')))
+print(list(field(goods, 'title', 'price')))
